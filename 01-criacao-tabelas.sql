@@ -8,7 +8,7 @@ CREATE TABLE numeroConta (
 	id INTEGER PRIMARY KEY,
 	conta VARCHAR(50) NOT NULL,
 	ativo BOOLEAN DEFAULT true,
-	pessoa_id FK UNIQUE NOT NULL,
+	pessoa_id FK INTEGER UNIQUE NOT NULL,
 		FOREIGN KEY (pessoa_id)
 		REFERENCES pessoa(id)
 	);
