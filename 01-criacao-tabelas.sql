@@ -1,0 +1,14 @@
+CREATE TABLE pessoa (
+	id INTEGER PRIMARY KEY, 
+	nome VARCHAR(100) NOT NULL,
+	cpf VARCHAR(50) NOT NULL 
+	);
+
+CREATE TABLE numeroConta (
+	id INTEGER PRIMARY KEY,
+	conta VARCHAR(50) NOT NULL,
+	ativo BOOLEAN DEFAULT true,
+	pessoa_id FK UNIQUE NOT NULL,
+		FOREIGN KEY (pessoa_id)
+		REFERENCES pessoa(id)
+	);
